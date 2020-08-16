@@ -24,7 +24,7 @@ Now we can use this mapper along with Pandas `replace` function to encode the `A
 ```
 # Replace feature values with scale
 df["Age-group"].replace(scale_mapper)
-```
+```{{execute}}
 
 The interesting point to note here is that it's not necessary for the numbers to be integers. Depending on the context of the problem, we can even assign floating point numbers to an ordinal category.
 

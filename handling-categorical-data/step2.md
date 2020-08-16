@@ -36,11 +36,6 @@ one_hot = LabelBinarizer()
 one_hot.fit_transform(feature)
 ```{{execute}}
 
-This is the output that we will obtain from the above step.
-
-```
-```
-
 We can use the `classes_` method to find the corresponsing classes.
 
 ```
