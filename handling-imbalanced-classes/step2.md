@@ -11,5 +11,23 @@ Class weight can be calculated using different methods. Here, we will simply use
 Using the same concept, in the case of our dataset, the class weights will be as follows:
 
 ```
-weights = {0: .9, 1: 0.1}
+weights = {0: 989/852, 1: 989/137}
 ```{{execute}}
+
+Now, let's create a Random Forest classifier with the above class weights.
+
+```
+# Create random forest classifier with weights
+RandomForestClassifier(class_weight=weights)
+```{{execute}}
+
+We could have skipped the calculation of class weights, by simply using the keyword `"balanced"` as shown below.
+
+```
+# Create random forest classifier
+RandomForestClassifier(class_weight="balanced")
+```{{execute}}
+
+Since our focus here was only to understand how to deal with imbalance of classes, we won't go into the details of how to train the classifier but you are welcome to give it a shot. It will be a great learning experience.
+
+In this step, we saw how to find out class weights and use them in a Machine Learning algorithm to counter the class imbalance. In next steps, we will go over different sampling techniques which increase or decrease the number of samples from the minority or the majority class, respectively, to handle class imbalance.

@@ -38,7 +38,9 @@ print(df.head())
 Finally, let's see whether there is a case of class imbalance in this dataset or not. To do this, we will count the number of passengers who survived and those who did not.
 
 ```
-print(df.Survived.value_count())
+print(df.Survived.value_counts())
 ```{{execute}}
+
+We can clearly see the imbalance here. Out of the total 989 passengers, only 137 survived.
 
 Now that we have reviewed the data, let's move on to the next steps.
