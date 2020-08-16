@@ -12,6 +12,7 @@ multiclass_feature = df.Origin_Current
 Next, just like we did in the case of `LabelBinarizer`, we will first create and fit the multi-class encoder and then use it to transform our multi-class feature column.
 
 ```
+from sklearn.preprocessing import MultiLabelBinarizer
 # Create multiclass one-hot encoder
 one_hot_multiclass = MultiLabelBinarizer()
 
