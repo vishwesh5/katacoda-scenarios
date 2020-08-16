@@ -14,7 +14,7 @@ import pandas as pd
 df = pd.DataFrame({
     "PassengerId":[1,2,3,4,5,6,7,8,9,10],
     "Country":["Sweden","Estonia","Estonia","Sweden","Sweden","Sweden","Sweden","Estonia","Estonia","Sweden"],
-    "Origin_Current":["(Sweden,Estonia)","(Sweden,Sweden)","(Estonia,Sweden)","(Sweden,Sweden)","(Estonia,Sweden)","(Sweden,Sweden)","(Estonia,Estonia)","(Sweden,Estonia)","(Estonia,Sweden)","(Estonia,Estonia)"],
+    "Origin_Current":[("Sweden","Estonia"),("Estonia","Sweden"),("Estonia","Sweden"),("Sweden","Norway"),("Sweden","Finland"),("Sweden","Russia"),("Sweden","Estonia"),("Estonia","Latvia"),("Estonia","Sweden"),("Sweden","Estonia")],
     "Age-group":["51-60","21-30","21-30","51-60","51-60","71-80","51-60","11-20","21-30","31-40"],
     "Category":["P","C","C","C","P","P","P","P","C","P"],
     "Survived":["NO","NO","YES","NO","NO","NO","NO","YES","NO","YES"]
