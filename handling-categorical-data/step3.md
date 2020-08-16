@@ -24,7 +24,7 @@ Similarly, we can find out the corresponding classes using the `classes_` method
 
 ```
 # View classes
-print(one_hot_multiclass.classes)
+print(one_hot_multiclass.classes_)
 ``` {{execute}}
 
 In this step, we saw how we can encode multi-class nominal features using Scikit-Learn's `MultiLabelBinarizer`. In the next step, we will shift our focus to **ordinal categorical features**.
