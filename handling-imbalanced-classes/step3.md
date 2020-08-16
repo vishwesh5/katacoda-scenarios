@@ -11,6 +11,8 @@ Here's how we can downsample the class 0 samples.
 First, we will find out the indices of each class' observations.
 
 ```
+import numpy as np
+
 i_class0 = np.where(target == 0)[0]
 i_class1 = np.where(target == 1)[0]
 
