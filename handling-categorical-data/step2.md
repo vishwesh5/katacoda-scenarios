@@ -43,7 +43,9 @@ This is the output that we will obtain from the above step.
 
 We can use the `classes_` method to find the corresponsing classes.
 
-`print(one_hot.classes_)` {execute}
+```
+print(one_hot.classes_)
+```{{execute}}
 
 If you want to obtain the original classes using the encoded features, we can use `inverse_transform` method.
 
