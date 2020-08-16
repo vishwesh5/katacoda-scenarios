@@ -17,7 +17,7 @@ imputer = Imputer(strategy='most_frequent', axis=0)
 
 # Fit and transform the data
 imputer.fit_transform(X_complete)
-```
+```{{execute}}
 
 Do you see any differences in the results obtained using kNN and `Imputer`? Think about the differences in the two algorithms. Where kNN was dependent on the **k** nearest neighbors, `Imputer` is taking into account **all** the data points. So as the **k** value keeps on increasing (and eventually reaches the total number of data points), the result of kNN will start getting closer and eventually match the result obtained using `Imputer`. Isn't that interesting?
 
