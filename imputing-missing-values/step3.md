@@ -15,17 +15,21 @@ from sklearn.neighbors import KNeighborsClassifier
 
 # Train KNN learner
 clf = KNeighborsClassifier(3, weights='distance')
-trained_model = clf.fit(X[:,1:], X[:,0])
+trained_model = clf.fit(X[:,:2], X[:,2])
 ``` {{execute}}
 
 Next, we can simply use the trained model to predict the missing categorical values.
 
 ```
 # Predict missing values' class
-imputed_values = trained_model.predict(X_with_nan[:,1:])
+imputed_values = trained_model.predict(X_with_nan[:,:2])
 
-# Predict missing values' class
-imputed_values = trained_model.predict(X_with_nan[:,1:])
+# Join column of predicted class with their other features
+X_with_imputed = np.hstack((X_with_nan[:,:2],imputed_values.reshape(-1,1)))
+
+# Join two feature matrices
+np.vstack((X_with_imputed, X))
+
 ``` {{execute}}
 
 And there we go! We have found the missing categorical values for the `Survived` column (feature).
