@@ -17,6 +17,8 @@ weights = {0: 989/852, 1: 989/137}
 Now, let's create a Random Forest classifier with the above class weights.
 
 ```
+from sklearn.ensemble import RandomForestClassifier
+
 # Create random forest classifier with weights
 RandomForestClassifier(class_weight=weights)
 ```{{execute}}
